@@ -1,0 +1,18 @@
+.landing-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  text-align: center;
+  padding: 4rem;
+  text-transform: uppercase;
+  .banner-image {
+    width: 100%;
+  }
+}
+@media (max-width: 1024px) {
+  .landing-banner {
+    display: block;
+    padding: 1rem;
+    margin: 1rem;
+  }
+}

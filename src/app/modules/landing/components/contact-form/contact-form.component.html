@@ -1,0 +1,95 @@
+<div class="home-contact">
+  <div class="mat-headline-3">
+    Contact us
+    <div class="mat-headline-5">Search for any locations in Indore</div>
+  </div>
+
+  <div class="contact-form-container mat-elevation-z8">
+    <form [formGroup]="options">
+      <div class="each-field">
+        <mat-radio-group [formControl]="floatLabelControl">
+          <mat-radio-button value="auto">Buy</mat-radio-button>
+          <mat-radio-button value="always">Rental</mat-radio-button>
+        </mat-radio-group>
+      </div>
+
+      <div class="each-field">
+        <mat-chip-listbox aria-label="Property selection" multiple="true">
+          <mat-chip-option selected>Plot</mat-chip-option>
+          <mat-chip-option>Commercial</mat-chip-option>
+          <mat-chip-option color="accent">Flat</mat-chip-option>
+          <mat-chip-option color="warn">Farm House</mat-chip-option>
+        </mat-chip-listbox>
+      </div>
+
+      <div>
+          <mat-slider
+          class="each-field"
+          min="5"
+          max="5000"
+          discrete
+          [displayWith]="formatLabel"
+          >
+          <input matSliderStartThumb [(value)]="minValue"/>
+          <input matSliderEndThumb [(value)]="maxValue" />
+        </mat-slider>
+      </div>
+
+      <div>
+        <mat-form-field class="each-field" appearance="fill">
+          <mat-label>Locations</mat-label>
+          <mat-chip-grid
+            #chipGrid
+            aria-label="Enter keywords"
+            [formControl]="formControl"
+          >
+            <mat-chip-row
+              *ngFor="let keyword of keywords"
+              (removed)="removeKeyword(keyword)"
+            >
+              {{ keyword }}
+              <button matChipRemove aria-label="'remove ' + keyword">
+                <mat-icon>cancel</mat-icon>
+              </button>
+            </mat-chip-row>
+          </mat-chip-grid>
+          <input
+            placeholder="New keyword..."
+            [matChipInputFor]="chipGrid"
+            (matChipInputTokenEnd)="add($event)"
+          />
+        </mat-form-field>
+      </div>
+    
+      <div>
+        <mat-form-field
+          class="each-field"
+          appearance="fill"
+        >
+          <mat-label>
+            <mat-icon>phone</mat-icon> <b> Phone</b> <i> (mobile)</i></mat-label
+          >
+          <input matInput placeholder="+ 91-12345-67890" />
+        </mat-form-field>
+      </div>
+      
+      <div>
+        <mat-form-field
+          class="each-field"
+          appearance="fill"
+        >
+          <mat-label>
+            <mat-icon>email</mat-icon> <b> Email</b>
+            <i> (optional)</i></mat-label
+          >
+          <input matInput placeholder="ek-do-teen@chaar.com" />
+        </mat-form-field>
+      </div>
+    
+      <div class="button-groups">
+        <button mat-raised-button color="accent">Submit</button>
+        <button mat-button>Cancel</button>
+      </div>
+    </form>
+  </div>
+</div>

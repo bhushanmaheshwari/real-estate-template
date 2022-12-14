@@ -1,0 +1,7 @@
+@use '@angular/material' as mat;
+
+$my-typography: mat.define-typography-config(
+    $font-family: 'Hind Siliguri, sans-serif',
+);
+
+@include mat.all-component-typographies($my-typography);

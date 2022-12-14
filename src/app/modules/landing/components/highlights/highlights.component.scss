@@ -1,0 +1,18 @@
+.home-highlights {
+  padding: 4rem;
+  margin: 5rem 0;
+  text-align: center;
+  .highlights-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    .highlight-card {
+      width: 300px;
+      margin: 10px;
+      .highlight-header-image {
+        background-image: url("https://material.angular.io/assets/img/examples/shiba1.jpg");
+        background-size: cover;
+      }
+    }
+  }
+}
