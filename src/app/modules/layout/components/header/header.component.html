@@ -10,6 +10,12 @@
         class="user-profile"
       ></button>
       <mat-menu #menu="matMenu">
+        <mat-card style="padding-bottom:12px">
+          <mat-card-header>
+            <mat-card-title>{{ user?.displayName }}</mat-card-title>
+            <mat-card-subtitle> {{ user?.email }} </mat-card-subtitle>
+          </mat-card-header>
+        </mat-card>
         <button mat-menu-item>
           <mat-icon>notifications_on</mat-icon>
           <span>Notifications</span>

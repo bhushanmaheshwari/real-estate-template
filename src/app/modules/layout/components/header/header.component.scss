@@ -13,6 +13,11 @@
   .user-profile {
     background-image: url("https://material.angular.io/assets/img/examples/shiba1.jpg");
     background-size: cover;
-    margin-bottom: inherit!important;
+    margin-bottom: inherit !important;
+  }
+
+  .user-profile-card {
+    padding-bottom: 2rem;
+    margin-bottom : 2rem!important;
   }
 }

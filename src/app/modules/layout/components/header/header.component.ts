@@ -11,7 +11,7 @@ export class HeaderComponent {
   constructor(public auth: AngularFireAuth) {
   }
   login() {
-    this.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
+    this.auth.signInWithRedirect(new firebase.auth.GoogleAuthProvider());
   }
   logout() {
     this.auth.signOut();
