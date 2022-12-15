@@ -1,18 +1,26 @@
-<mat-toolbar color="primary">
+<mat-toolbar class="header-container" color="primary">
   <img class="site-logo" src="/assets/images/logo.png" />
-  <span class="example-spacer"></span>
-  <button
-    mat-icon-button
-    class="example-icon favorite-icon"
-    aria-label="Example icon-button with heart icon"
-  >
-    <mat-icon>favorite</mat-icon>
-  </button>
-  <button
-    mat-icon-button
-    class="example-icon"
-    aria-label="Example icon-button with share icon"
-  >
-    <mat-icon>share</mat-icon>
-  </button>
+  <div class="header-actions">
+    <button
+      aria-label="User profile menu"
+      mat-icon-button
+      [matMenuTriggerFor]="menu"
+      mat-card-avatar
+      class="user-profile"
+    ></button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>
+        <mat-icon>notifications_on</mat-icon>
+        <span>Notifications</span>
+      </button>
+      <button mat-menu-item disabled>
+        <mat-icon>settings</mat-icon>
+        <span>Settings (soon)</span>
+      </button>
+      <button mat-menu-item>
+        <mat-icon>logout</mat-icon>
+        <span>Logout</span>
+      </button>
+    </mat-menu>
+  </div>
 </mat-toolbar>
