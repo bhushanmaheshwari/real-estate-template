@@ -1,7 +1,18 @@
-.example-spacer {
-  flex: 1 1 auto;
-}
+.header-container {
+  justify-content: space-between;
 
-.site-logo {
-  width: 60px;
+  .site-logo {
+    width: 50px;
+  }
+
+  .header-actions {
+    display: flex;
+    align-items: center;
+  }
+
+  .user-profile {
+    background-image: url("https://material.angular.io/assets/img/examples/shiba1.jpg");
+    background-size: cover;
+    margin-bottom: inherit!important;
+  }
 }
