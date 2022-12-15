@@ -8,6 +8,28 @@ import { MapService } from "../core/map.service";
 export class MapLayerService {
   constructor(private mapService: MapService) {}
 
+  getBasicMapData() {
+    return this.mapService.getMapData("").pipe(
+      map((properties: any[]) => {
+        const locations = properties.map((p) => {
+          return {
+            name: p?.heading || p?.BUILDING_NAME,
+            localityName: p?.location?.localityName || p?.LOCALITY,
+            latitude: p?.location?.latitude || p?.MAP_DETAILS?.LATITUDE,
+            longitude: p?.location?.longitude || p?.MAP_DETAILS?.LONGITUDE,
+            thumbnailUrl: p?.coverImage?.url || p?.MEDIUM_PHOTO_URL,
+            description: (
+              p?.description?.text ||
+              p?.DESCRIPTION ||
+              ""
+            ).substring(0, 100),
+          };
+        });
+        return locations;
+      })
+    );
+  }
+
   getBasicMapDataLayer() {
     return this.mapService.getMapData("").pipe(
       map((properties: any[]) => {
