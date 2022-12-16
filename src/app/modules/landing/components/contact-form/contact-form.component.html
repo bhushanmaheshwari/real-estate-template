@@ -26,7 +26,7 @@
           <mat-slider
           class="each-field"
           min="5"
-          max="5000"
+          max="500"
           discrete
           [displayWith]="formatLabel"
           >
@@ -83,6 +83,18 @@
             <i> (optional)</i></mat-label
           >
           <input matInput placeholder="ek-do-teen@chaar.com" />
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field
+          class="each-field"
+          appearance="fill"
+        >
+          <mat-label>
+            <mat-icon>comment</mat-icon> <b> Comments</b>
+            <i> (optional)</i></mat-label
+          >
+          <textarea matInput placeholder="Express yourself!" ></textarea>
         </mat-form-field>
       </div>
     

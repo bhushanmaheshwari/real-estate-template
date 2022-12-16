@@ -1,9 +1,9 @@
 .home-contact {
   text-align: center;
-  padding: 8rem;
-  margin: 5rem 0;
   .contact-form-container {
     text-align: left;
+    max-width: 600px;
+    background-color: #FFF;
     padding: 2rem;
     margin: 1rem auto;
     .each-field {
@@ -17,11 +17,5 @@
             margin-left : 0.5rem;
         }
     }
-  }
-}
-@media (max-width: 1024px) {
-  .home-contact {
-    padding: 1rem;
-    margin: 1rem auto;
   }
 }

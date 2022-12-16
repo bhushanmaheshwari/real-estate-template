@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/landing', pathMatch: 'full' },
+  { path: '', redirectTo: '/admin', pathMatch: 'full' },
   {
     path: 'landing',
     loadChildren: () =>
@@ -12,6 +12,11 @@ const routes: Routes = [
     path: 'search',
     loadChildren: () =>
       import('./modules/search/search.module').then((x) => x.SearchModule),
+  },
+  {
+    path: 'admin',
+    loadChildren: () =>
+      import('./modules/admin/admin.module').then((x) => x.AdminModule),
   },
 ];
 

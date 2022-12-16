@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 
 import { SearchRoutingModule } from './search-routing.module';
 import { SearchHomeComponent } from './components/search-home/search-home.component';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MaterialExampleModule } from '../material.module';
 
 
 @NgModule({
@@ -11,7 +13,9 @@ import { SearchHomeComponent } from './components/search-home/search-home.compon
   ],
   imports: [
     CommonModule,
-    SearchRoutingModule
+    SearchRoutingModule,
+    MaterialExampleModule,
+    LayoutModule
   ]
 })
 export class SearchModule { }

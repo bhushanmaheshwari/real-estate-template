@@ -10,8 +10,8 @@ import { MatChipInputEvent } from '@angular/material/chips';
 export class ContactFormComponent {
   hideRequiredControl = new FormControl(false);
   keywords = ['Indore','Supercorridor'];
-  maxValue = 2500;
-  minValue = 340;
+  maxValue = 250;
+  minValue = 34;
   formControl = new FormControl(['angular']);
   floatLabelControl = new FormControl('auto' as FloatLabelType);
   options = this._formBuilder.group({

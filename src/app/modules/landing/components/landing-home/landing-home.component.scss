@@ -1,4 +1,19 @@
 .landing-home {
+  width: 100%;
+  .each-section {
     margin: 0 auto;
     max-width: 1200px;
+    padding: 5rem;
+  }
+  .section-grey {
+    background-color: #eee;
+  }
+}
+
+@media (max-width: 1024px) {
+  .landing-home {
+    .each-section {
+      padding: 5rem 2rem;
+    }
+  }
 }
