@@ -1,5 +1,16 @@
 .home-contact {
   text-align: center;
+  .section-heading {
+    font-size: 55px;
+    line-height: 3.8rem;
+  }
+
+  .section-subheading {
+    font-size: 18px;
+    line-height: 30px;
+    color: #808080;
+    margin: 2rem 0;
+  }
   .contact-form-container {
     text-align: left;
     max-width: 600px;
