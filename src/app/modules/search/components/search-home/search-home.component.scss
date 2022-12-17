@@ -1,0 +1,39 @@
+.grid-container {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  .cell-container {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+  }
+  .cell-25 {
+    width: 25%;
+  }
+  .cell-auto {
+    width: 75%;
+  }
+}
+
+@media (max-width: 1280px) {
+  .grid-container {
+    .cell-25 {
+      width: 50%;
+    }
+    .cell-auto {
+      width: 50%;
+    }
+  }
+}
+
+@media (min-width: 1280px) and (max-width: 1580px) {
+  .grid-container {
+    .cell-25 {
+      width: 40%;
+    }
+    .cell-auto {
+      width: 60%;
+    }
+  }
+}

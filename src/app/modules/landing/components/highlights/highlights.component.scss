@@ -5,8 +5,12 @@
     justify-content: center;
     flex-wrap: wrap;
     .highlight-card {
-      width: 300px;
+      text-align: left;
+      width: 40%;
       margin: 10px;
+      .card-group {
+        justify-content: flex-start!important;
+      }
       .highlight-header-image {
         background-image: url("https://material.angular.io/assets/img/examples/shiba1.jpg");
         background-size: cover;
