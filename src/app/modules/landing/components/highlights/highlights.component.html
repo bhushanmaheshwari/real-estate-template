@@ -3,7 +3,7 @@
   <div class="section-subheading">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi nulla reprehenderit assumenda dicta sequi, unde tempora debitis mollitia placeat eaque atque veritatis repellat expedita repudiandae, soluta, enim maiores animi laboriosam?</div>
 
   <div *ngIf="highlights?.length" class="highlights-container">
-    <mat-card *ngFor="let a of highlights" class="highlight-card">
+    <mat-card *ngFor="let a of highlights" (click)="navigateToDetails()" class="highlight-card">
       <mat-card-title-group class="card-group">
         <mat-card-header>
           <mat-card-title>{{ a.name || "Not Named" }}</mat-card-title>

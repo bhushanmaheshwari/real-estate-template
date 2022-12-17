@@ -1,0 +1,9 @@
+<mat-grid-list cols="4" class="image-container">
+    <mat-grid-tile
+      *ngFor="let tile of tiles"
+      [colspan]="tile.cols"
+      [rowspan]="tile.rows"
+    >
+      <img class="image-tile" [src]="tile.imgUrl" />
+    </mat-grid-tile>
+  </mat-grid-list>
