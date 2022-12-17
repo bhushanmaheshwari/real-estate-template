@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { Router } from "@angular/router";
 import { MapLayerService } from "src/app/services/business/map-layer.service";
 
 @Component({
@@ -8,7 +9,10 @@ import { MapLayerService } from "src/app/services/business/map-layer.service";
 })
 export class HighlightsComponent implements OnInit {
   highlights: any[] = [];
-  constructor(private mapLayerService: MapLayerService) {}
+  constructor(
+    private mapLayerService: MapLayerService,
+    private router: Router
+  ) {}
 
   ngOnInit() {
     this.loadData();
@@ -18,5 +22,9 @@ export class HighlightsComponent implements OnInit {
     this.mapLayerService.getBasicMapData().subscribe((data: any[]) => {
       this.highlights = (data || []).slice(0, 6);
     });
+  }
+
+  navigateToDetails() {
+    this.router.navigate(['details', '1']);
   }
 }
