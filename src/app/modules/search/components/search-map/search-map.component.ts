@@ -4,11 +4,11 @@ import { MapLayerService } from "src/app/services/business/map-layer.service";
 import env from "src/environment/environment";
 
 @Component({
-  selector: "app-map",
-  templateUrl: "./map.component.html",
-  styleUrls: ["./map.component.scss"],
+  selector: "app-search-map",
+  templateUrl: "./search-map.component.html",
+  styleUrls: ["./search-map.component.scss"],
 })
-export class MapComponent implements OnInit {
+export class SearchMapComponent implements OnInit {
   constructor(private mapLayerService: MapLayerService) {}
 
   map!: mapboxgl.Map;
@@ -29,10 +29,11 @@ export class MapComponent implements OnInit {
       style: this.style,
       zoom: 11,
       center: [this.lng, this.lat],
-      attributionControl : false
+      attributionControl: false
     });
     // Add map controls
     this.map.addControl(new mapboxgl.NavigationControl());
+    this.map.addControl(new mapboxgl.FullscreenControl());
 
     this.map.on("load", () => {
       this.map.addSource("places", data);

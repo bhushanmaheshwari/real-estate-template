@@ -1,0 +1,17 @@
+.listing-container {
+  height: 100vh;
+//   max-width: 600px;
+  .scroll-area {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .each-card {
+    width: 46%;
+    margin: 2%;
+    img {
+        width: 100%;
+    }
+  }
+}

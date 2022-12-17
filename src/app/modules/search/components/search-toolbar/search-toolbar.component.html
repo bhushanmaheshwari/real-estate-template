@@ -1,0 +1,10 @@
+<div class="toolbar-container">
+  <div class="each-filter" *ngFor="let f of filters">
+    <div class="each-icon">
+      <button mat-icon-button>
+        <mat-icon>{{ f.icon }}</mat-icon>
+      </button>
+    </div>
+    <div class="each-filter-text">{{ f.title }}</div>
+  </div>
+</div>
