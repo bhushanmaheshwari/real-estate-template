@@ -1,6 +1,6 @@
 <cdk-virtual-scroll-viewport appendOnly itemSize="50" class="listing-container">
   <div class="scroll-area">
-    <mat-card *cdkVirtualFor="let a of properties" (click)="navigateToDetails()" class="each-card">
+    <mat-card *cdkVirtualFor="let a of properties" (click)="navigateToDetails(a)" class="each-card">
       <mat-card-header>
         <mat-card-title>{{ a.name || "Not Named" }}</mat-card-title>
         <mat-card-subtitle>{{ a.localityName }}</mat-card-subtitle>

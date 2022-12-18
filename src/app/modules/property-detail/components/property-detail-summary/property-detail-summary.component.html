@@ -1,10 +1,49 @@
-<div class="detail-price">1-2cr</div>
-<div class="description">
-  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum doloremque
-  voluptatem inventore. Aperiam deserunt omnis minus aspernatur, architecto,
-  fugiat ducimus tenetur sed amet neque ipsum veritatis similique reiciendis
-  consectetur cupiditate?
-</div>
-<div class="detail-facilities">
-    top facilities
+<div class="summary-container">
+  <div class="detail-price">
+    50 lacs - 2 crores
+    <div class="mat-caption">
+      <mat-chip-set>
+        <mat-chip *ngFor="let c of coreAttributes">{{ c }}</mat-chip>
+      </mat-chip-set>
+    </div>
+  </div>
+  <mat-divider></mat-divider>
+  <div class="description">
+    <div class="mat-subtitle-2">KNOW MORE ABOUT PROPERTY</div>
+    <div class="mat-body">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum illum
+      dolorem aliquam, cum eius praesentium enim ut. Quisquam ipsa nesciunt
+      voluptatum repellendus. Doloremque repellendus accusantium natus obcaecati
+      distinctio voluptatum odio. Lorem ipsum, dolor sit amet consectetur
+      adipisicing elit. Doloremque temporibus molestias sint corporis maiores
+      corrupti asperiores harum unde facilis vero voluptatibus cum, pariatur
+      architecto reprehenderit amet illum veritatis praesentium aspernatur.
+    </div>
+  </div>
+  <mat-divider></mat-divider>
+  <div class="detail-facilities">
+    <div class="mat-subtitle-2">TOP FACILITIES</div>
+    <mat-list class="list-group">
+      <mat-list-item class="each-list-item" *ngFor="let f of coreFacilities">
+        <mat-icon matListItemIcon>{{ f.icon }}</mat-icon>
+        <div matListItemTitle>{{ f.name }}</div>
+        <div matListItemLine>{{ f.subtitle }}</div>
+      </mat-list-item>
+      <ng-container *ngIf="showAllFacilities">
+        <mat-list-item class="each-list-item" *ngFor="let f of additionalFacilities">
+          <mat-icon matListItemIcon>{{ f.icon }}</mat-icon>
+          <div matListItemTitle>{{ f.name }}</div>
+          <div matListItemLine>{{ f.subtitle }}</div>
+        </mat-list-item>
+      </ng-container>
+    </mat-list>
+    <button
+      *ngIf="!showAllFacilities"
+      mat-stroked-button
+      (click)="toggleShowAllFacilities()"
+    >
+      Show all facilities
+    </button>
+  </div>
+  <mat-divider></mat-divider>
 </div>
