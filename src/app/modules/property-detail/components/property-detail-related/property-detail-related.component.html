@@ -1,1 +1,30 @@
-<div class="detail-related">related properties</div>
+<div class="detail-related">
+  <div class="mat-subtitle-2">RELATED PROPERTIES</div>
+  <div class="card-group">
+    <mat-card
+      *ngFor="let a of related"
+      (click)="navigateToDetails(a)"
+      class="related-card"
+    >
+      <mat-card-title>
+        <mat-card-header>
+          <mat-card-title>{{ a.name || "Not Named" }}</mat-card-title>
+          <mat-card-subtitle>{{ a.localityName }}</mat-card-subtitle>
+        </mat-card-header>
+        <img
+          mat-card-image
+          class="card-image"
+          src="{{ a.thumbnailUrl }}"
+          alt="{{ a.name }}"
+        />
+      </mat-card-title>
+      <mat-card-content>{{ a.description }}</mat-card-content>
+      <mat-card-footer>
+        <mat-card-actions>
+          <button mat-button>LIKE</button>
+          <button mat-button>SHARE</button>
+        </mat-card-actions>
+      </mat-card-footer>
+    </mat-card>
+  </div>
+</div>

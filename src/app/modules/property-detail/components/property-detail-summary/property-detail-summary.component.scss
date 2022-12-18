@@ -1,0 +1,26 @@
+.summary-container {
+    .detail-price {
+        padding : 2rem 0;
+        font-size: 28px;
+        line-height: 2rem;
+    }
+    .description {
+        padding : 2rem 0;
+        max-width: 80%;
+        div {
+            padding : 5px 0px;
+        }
+    }
+    .detail-facilities{
+        padding : 2rem 0;
+        .list-group {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 800px;
+        }
+        .each-list-item {
+            width: 50%;
+            min-width: 300px;
+        }
+    }
+}

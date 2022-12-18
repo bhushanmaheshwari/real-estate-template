@@ -25,7 +25,7 @@ export class SearchListingComponent implements OnInit {
     });
   }
 
-  navigateToDetails() {
-    this.router.navigate(["details", "1"]);
+  navigateToDetails(e: any) {
+    this.router.navigate(["details", e.name || 'no name']);
   }
 }

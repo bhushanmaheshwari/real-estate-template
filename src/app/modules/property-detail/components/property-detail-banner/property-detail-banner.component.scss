@@ -1,0 +1,18 @@
+.intro {
+  margin: 2rem 0px;
+  .intro-headline {
+    font-size: 35px;
+    line-height: 3rem;
+  }
+  .intro-toolbar {
+    font-size: 18px;
+    color: #808080;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .icons {
+      display: flex;
+      gap : 5px;
+    }
+  }
+}
