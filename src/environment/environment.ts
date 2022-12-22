@@ -1,9 +1,4 @@
 const env = {
-  mapbox: {
-    accessToken:
-      "pk.eyJ1IjoidGhlbmVlZGxlY29tcGFzcyIsImEiOiJjbGE1aDNsMjgwOGZhM29wdGRjamFuemg0In0.AR9FeJWL4kL2-SD0Ql1KRw",
-  },
-
   firebaseConfig: {
     apiKey: "AIzaSyDpKIviV49nB7Zgy-ubqHjRa_U4rB9ta3E",
     authDomain: "bm-real-estate-sample.firebaseapp.com",
