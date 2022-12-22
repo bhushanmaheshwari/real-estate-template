@@ -8,6 +8,7 @@ import { MaterialExampleModule } from '../material.module';
 import { SearchMapComponent } from './components/search-map/search-map.component';
 import { SearchListingComponent } from './components/search-listing/search-listing.component';
 import { SearchToolbarComponent } from './components/search-toolbar/search-toolbar.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { SearchToolbarComponent } from './components/search-toolbar/search-toolb
     CommonModule,
     SearchRoutingModule,
     MaterialExampleModule,
-    LayoutModule
+    LayoutModule,
+    SharedModule
   ]
 })
 export class SearchModule { }
