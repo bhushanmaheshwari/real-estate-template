@@ -20,11 +20,22 @@
       width: 40%;
       margin: 10px;
       .card-group {
-        justify-content: flex-start!important;
+        justify-content: flex-start !important;
       }
       .highlight-header-image {
         background-image: url("https://material.angular.io/assets/img/examples/shiba1.jpg");
         background-size: cover;
+      }
+    }
+  }
+}
+
+@media (max-width: 786px) {
+  .home-highlights {
+    .highlights-container {
+      display: block;
+      .highlight-card {
+        width: 90%;
       }
     }
   }

@@ -1,6 +1,6 @@
 .listing-container {
   height: 100vh;
-//   max-width: 600px;
+  //   max-width: 600px;
   .scroll-area {
     display: flex;
     flex-wrap: wrap;
@@ -11,7 +11,20 @@
     width: 46%;
     margin: 2%;
     img {
-        width: 100%;
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 1280px) {
+  .listing-container {
+    height: 100vh;
+    //   max-width: 600px;
+    .scroll-area {
+      display: block;
+    }
+    .each-card {
+      width: 96%;
     }
   }
 }

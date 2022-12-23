@@ -9,14 +9,14 @@
     height: 100vh;
   }
   .cell-25 {
-    width: 25%;
+    width: 30%;
   }
   .cell-auto {
-    width: 75%;
+    width: 70%;
   }
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 786px) {
   .grid-container {
     .cell-25 {
       width: 50%;
@@ -27,7 +27,7 @@
   }
 }
 
-@media (min-width: 1280px) and (max-width: 1580px) {
+@media (min-width: 786px) and (max-width: 1580px) {
   .grid-container {
     .cell-25 {
       width: 40%;
@@ -37,3 +37,5 @@
     }
   }
 }
+
+  
