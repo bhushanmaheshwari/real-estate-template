@@ -12,9 +12,12 @@
   }
 
   .user-profile {
-    background-image: url("https://material.angular.io/assets/img/examples/shiba1.jpg");
+    // background-image: url("https://material.angular.io/assets/img/examples/shiba1.jpg");
     background-size: cover;
     margin-bottom: inherit !important;
+    background-color: rgba(0, 0, 0, 0.3);
+    text-transform: uppercase;
+    font-size: 18px;
   }
 
   .user-profile-card {
