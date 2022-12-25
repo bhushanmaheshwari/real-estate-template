@@ -9,7 +9,7 @@
         [matMenuTriggerFor]="menu"
         mat-card-avatar
         class="user-profile"
-      ></button>
+      >{{ user?.displayName?.substring(0,2) }}</button>
       <mat-menu #menu="matMenu">
         <mat-card style="padding-bottom: 12px">
           <mat-card-header>
