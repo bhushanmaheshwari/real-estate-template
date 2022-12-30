@@ -13,6 +13,7 @@ export class SharedMapComponent implements OnInit {
   markerOptions: google.maps.MarkerOptions = { draggable: false };
   markerPositions: google.maps.LatLngLiteral[] = [];
   options: google.maps.MapOptions = {
+    mapId : '8e0a97af9386fef',
     center: { lat: 22.719568, lng: 75.85772 },
     zoom: 12,
     minZoom : 3,
