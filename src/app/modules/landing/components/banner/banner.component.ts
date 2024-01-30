@@ -5,6 +5,7 @@ import { MatAutocompleteSelectedEvent } from "@angular/material/autocomplete";
 import { ActivatedRoute, Router } from "@angular/router";
 import { Observable, of } from "rxjs";
 import { map, startWith } from "rxjs/operators";
+import { PropertiesService } from "src/app/services/business/properties.service";
 
 @Component({
   selector: "app-banner",
@@ -13,16 +14,27 @@ import { map, startWith } from "rxjs/operators";
 })
 export class BannerComponent implements OnInit {
   myControl = new FormControl("");
-  options: string[] = ["Indore", "Sarafa", "Palasia"];
+  options: string[] = [];
   filteredOptions: Observable<string[]> = of([]);
 
-  constructor(private ar: ActivatedRoute, private router: Router) {}
+  constructor(
+    private ar: ActivatedRoute,
+    private router: Router,
+    private propertiesService: PropertiesService
+  ) {}
 
   ngOnInit() {
-    this.filteredOptions = this.myControl.valueChanges.pipe(
-      startWith(""),
-      map((value) => this._filter(value || ""))
-    );
+    this.getData();
+  }
+
+  getData() {
+    this.propertiesService.getPropertyLocalities().subscribe((locs) => {
+      this.options = locs.map((x: any) => `${x.name} (${x.count})`);
+      this.filteredOptions = this.myControl.valueChanges.pipe(
+        startWith(""),
+        map((value) => this._filter(value || ""))
+      );
+    });
   }
 
   navigateToSearch($event: MatAutocompleteSelectedEvent) {

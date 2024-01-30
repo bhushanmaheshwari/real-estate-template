@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
 import { MapLayerService } from "src/app/services/business/map-layer.service";
+import { PropertiesService } from "src/app/services/business/properties.service";
 
 @Component({
   selector: "app-search-listing",
@@ -11,7 +12,7 @@ export class SearchListingComponent implements OnInit {
   properties: any[] = [];
 
   constructor(
-    private mapLayerService: MapLayerService,
+    private propertiesService: PropertiesService,
     private router: Router
   ) {}
 
@@ -20,12 +21,12 @@ export class SearchListingComponent implements OnInit {
   }
 
   loadData() {
-    this.mapLayerService.getBasicMapData().subscribe((data: any[]) => {
+    this.propertiesService.getAllProperties().subscribe((data: any[]) => {
       this.properties = data || [];
     });
   }
 
   navigateToDetails(e: any) {
-    this.router.navigate(["details", e.name || 'no name']);
+    this.router.navigate(["details", e.name || "no name"]);
   }
 }

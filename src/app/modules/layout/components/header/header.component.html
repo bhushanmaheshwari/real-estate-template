@@ -1,7 +1,7 @@
 <mat-toolbar class="header-container" color="primary">
   <img  (click)="navigateToHome()" class="site-logo" src="/assets/images/logo.png" />
 
-  <div class="header-actions">
+  <div class="header-actions" *ngIf="false">
     <div *ngIf="auth.user | async as user; else showLogin">
       <button
         aria-label="User profile menu"

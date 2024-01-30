@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
-import { MapLayerService } from "src/app/services/business/map-layer.service";
+import { PropertiesService } from "src/app/services/business/properties.service";
 
 @Component({
   selector: "app-highlights",
@@ -10,7 +10,7 @@ import { MapLayerService } from "src/app/services/business/map-layer.service";
 export class HighlightsComponent implements OnInit {
   highlights: any[] = [];
   constructor(
-    private mapLayerService: MapLayerService,
+    private propertiesService: PropertiesService,
     private router: Router
   ) {}
 
@@ -19,8 +19,8 @@ export class HighlightsComponent implements OnInit {
   }
 
   loadData() {
-    this.mapLayerService.getBasicMapData().subscribe((data: any[]) => {
-      this.highlights = (data || []).slice(0, 6);
+    this.propertiesService.getAllProperties().subscribe((data: any[]) => {
+      this.highlights = (data || []);
     });
   }
 

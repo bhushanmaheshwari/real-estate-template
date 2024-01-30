@@ -1,0 +1,19 @@
+{ 
+    "status" : "success",
+    "data" : {
+        "properties" : [
+            { "PROP_HEADING" : "Super corridor", "PLOT_SIZE" : "1000-5000 sqft", "LATITUDE" : "", "LONGITUDE" : "", "PHOTO_URL" : "", "PRICE_RANGE" : "3000-7000 INR" },
+            { "PROP_HEADING" : "Ujjain Road (Aurobindo to Dharampuri", "PLOT_SIZE" : "675-3000 sqft", "LATITUDE" : "", "LONGITUDE" : "", "PHOTO_URL" : "", "PRICE_RANGE" : "2000-7000 INR" },
+            { "PROP_HEADING" : "Bypass (Rau to Dewas Square", "PLOT_SIZE" : "1000-5000 sqft", "LATITUDE" : "", "LONGITUDE" : "", "PHOTO_URL" : "", "PRICE_RANGE" : "4000-11000 INR" },
+            { "PROP_HEADING" : "Kanadiya Road Bypass", "PLOT_SIZE" : "1000-3000 sqft", "LATITUDE" : "", "LONGITUDE" : "", "PHOTO_URL" : "", "PRICE_RANGE" : "3000-5000 INR" },
+            { "PROP_HEADING" : "Bicholi Area Bypass", "PLOT_SIZE" : "5000-30000 sqft", "LATITUDE" : "", "LONGITUDE" : "", "PHOTO_URL" : "", "PRICE_RANGE" : "6000++ INR" },
+            { "PROP_HEADING" : "Residential Flats - Race Course Road", "PLOT_SIZE" : "1500-4500 sqft", "LATITUDE" : "", "LONGITUDE" : "", "PHOTO_URL" : "", "PRICE_RANGE" : "3000-7000 INR" },
+            { "PROP_HEADING" : "Office Space (Regal to Vijay Nagar)", "PLOT_SIZE" : "500-2000 sqft", "LATITUDE" : "", "LONGITUDE" : "", "PHOTO_URL" : "", "PRICE_RANGE" : "7000-11000 INR" },
+            { "PROP_HEADING" : "Office Space (Super Corridor)", "PLOT_SIZE" : "1000-3000 sqft", "LATITUDE" : "", "LONGITUDE" : "", "PHOTO_URL" : "", "PRICE_RANGE" : "6500-7500 INR" },
+            { "PROP_HEADING" : "Indore City Area - Plots", "PLOT_SIZE" : "1000-2400 sqft", "LATITUDE" : "", "LONGITUDE" : "", "PHOTO_URL" : "", "PRICE_RANGE" : "10000-19000 INR" },
+            { "PROP_HEADING" : "Navda Panth - Dhar Road ", "PLOT_SIZE" : "1000-5000 sqft", "LATITUDE" : "", "LONGITUDE" : "", "PHOTO_URL" : "", "PRICE_RANGE" : "3000-7000 INR" },
+            { "PROP_HEADING" : "Scheme-140 (Near Agarwal Public School)", "PLOT_SIZE" : "1000-11000 sqft", "LATITUDE" : "", "LONGITUDE" : "", "PHOTO_URL" : "", "PRICE_RANGE" : "10000-30000 INR" },
+            { "PROP_HEADING" : "Nipaniya", "PLOT_SIZE" : "750-4000 sqft", "LATITUDE" : "", "LONGITUDE" : "", "PHOTO_URL" : "", "PRICE_RANGE" : "6000-13000 INR" }
+        ]
+    }
+}

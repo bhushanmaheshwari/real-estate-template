@@ -1,6 +1,8 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { map } from "rxjs/operators";
+import { of } from "rxjs";
+import env from "src/environment/environment";
 
 @Injectable({
   providedIn: "root",
@@ -8,10 +10,22 @@ import { map } from "rxjs/operators";
 export class MapService {
   constructor(private http: HttpClient) {}
 
-  getMapData(props: any) {
-    return this.http.get("assets/jsons/properties.json").pipe(
+  lookupProperties(props: any) {
+    return this.http.get(env.api.core + env.api.lookup).pipe(
       map((data: any) => {
-        return data?.properties;
+        console.log(data);
+        return data;
+      })
+    );
+  }
+
+  getProperties(props: any) {
+    
+    return this.http.get('assets/jsons/mayank.json').pipe(
+    // return this.http.get(env.api.core + env.api.properties).pipe(
+      map((data: any) => {
+        console.log(data);
+        return data;
       })
     );
   }
