@@ -1,6 +1,7 @@
 import { Component } from "@angular/core";
 import { Router } from "@angular/router";
 import { MapLayerService } from "src/app/services/business/map-layer.service";
+import { PropertiesService } from "src/app/services/business/properties.service";
 
 @Component({
   selector: "app-property-detail-related",
@@ -10,7 +11,7 @@ import { MapLayerService } from "src/app/services/business/map-layer.service";
 export class PropertyDetailRelatedComponent {
   related: any[] = [];
   constructor(
-    private mapLayerService: MapLayerService,
+    private propertiesService: PropertiesService,
     private router: Router
   ) {}
 
@@ -19,7 +20,7 @@ export class PropertyDetailRelatedComponent {
   }
 
   loadData() {
-    this.mapLayerService.getBasicMapData().subscribe((data: any[]) => {
+    this.propertiesService.getAllProperties().subscribe((data: any[]) => {
       this.related = (data || []).slice(0, 6);
     });
   }
